@@ -4,15 +4,15 @@ import asyncio
 import getpass
 
 async def analyze_telegram_channel():
-    api_id = '26792186'
-    api_hash = '017458d6e376a82e45c0b371f8499271'
-    channel_username = '@Eng_Arzoni_Uz'
+    api_id = 'PASTE'
+    api_hash = 'PASTE'
+    channel_username = '@'
 
     client = TelegramClient('my_session', api_id, api_hash)
     
     try:
         await client.start(
-            phone=lambda: input("Введите номер телефона (+998...): "),
+            phone=lambda: input("Введите номер телефона (+...): "),
             code_callback=lambda: input("Код из Telegram: "),
             password=lambda: getpass.getpass("Пароль 2FA (если есть): ")
         )
